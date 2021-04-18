@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html{
+  width: 100vw;
+}
+
+
+:root{
+  --primary-font-size:  20px;
+  --secondary-font-size: 18px;
+  --tertiary-font-size: 16px;
+
+  --primary-color: green;
+  --primary-hover-color:rgb(1, 139, 1);
+  --secondary-color: #d4af37;
+  --secondary-hover-color: #e7c03e;
+
+  --grey-hover-color: rgb(230, 224, 224);
+
+  --secondary-font-family: 'New Tegomin', serif;
+}
+
+
+.App{
+  background: whitesmoke;
+  height:100vh;
+  position: relative;
+}
+
+.container{
+  width: 100vw;
+  height: 400px;
+  display:flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.box{
+  box-shadow: 0px 0px 10px 0.5px gray;
+  border-radius: 5px;
+  width: 500px;
+  height: 500px;
+}
+
+.speechContainer{
+  padding: 20px;
+  padding-top: 5px;
+  position: relative;
+  padding-top: 50px;
+
+}
+
+.speechContainer h4{
+  font-weight: 400;
+  font-size: var(--primary-font-size);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bttn_container{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+  align-items: center;
+  border-bottom: 1px solid rgb(155, 151, 151);
+}
+
+.bttn_container  button{
+  height: 60px;
+  width: 200px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: var(--secondary-font-size);
+  border-radius: 5px;
+  outline: 0px;
+  border: none;
+  box-shadow: 0px 0px 5px 5px rgb(212, 209, 209);
+  cursor: pointer;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.bttn_container  button:first-child{
+  background-color: var(--primary-color);
+  transition: 0.3s ease-out background-color;
+}
+.bttn_container  button:first-child:hover{
+  background-color: var(--primary-hover-color);
+}
+
+.bttn_container  button:nth-child(2){
+  background-color: var(--secondary-color);
+  transition: 0.3s ease-out background-color;
+}
+.bttn_container  button:nth-child(2):hover{
+  background-color: var(--secondary-hover-color);
+}
+
+.conv_text{
+  padding: 15px;
+}
+.conv_text p{
+  font-family: var(--secondary-font-family);
+}
+
+.textContainer{
+  position: relative;
+  overflow: auto;
+}
+
+.saved_txt{
+  padding: 15px 10px;
+  border-bottom: 1px solid rgb(161, 157, 157);  
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+  transition: 0.3s ease-out background-color;
+}
+
+.saved_txt:first-child{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.saved_txt:last-child{
+  
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+.saved_txt:hover{
+  background-color: var(--grey-hover-color);
+
+}
+.saved_txt p{
+  font-size: var(--tertiary-font-size); 
+  margin-right: 10px;
+  font-size: var(--tertiary-font-size);
+  
+  
+}
+.saved_txt:last-child{
+  border-bottom: none;
+}
+
+.icon_container{
+  display: flex;
+  flex-direction: row;
+}
+.prev_icon{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s ease color;
+}
+
+.prev_icon g path{
+  pointer-events: none;
+}
+
+.prev_icon[id="copy"]{
+  font-size: 20px;
+  padding-top: 2.5px;
+}
+.prev_icon[id="copy"] path,
+.prev_icon[id="remove"] path{
+  pointer-events: none;
+}
+
+.prev_icon[id="copy"]:hover{
+  color: rgb(116, 113, 113);
+}
+
+.prev_icon[id="remove"]{
+  font-size: 24px;
+}
+.prev_icon[id="remove"]:hover{
+  color: red;
+}
+
+
+.ball{
+  color: #f25c34;
+  width: 20px;
+}
+
+.btn_sv_icon{
+  font-size: 30px;
+  pointer-events: none;
+}
+
+.sp_st_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80px;
+  font-size: 12px;
+  text-shadow: 2px 2px 2px #ff0000;
+  pointer-events: none;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 20px;
+}
+.header p{
+  font-size: var(--secondary-font-size);
+  border-bottom: 1px solid rgb(136, 133, 133);
+  padding: 2px;
+  height: 23px;
+}
+
+.copy_back{
+  background-color: green;
+  transition: 0.5s ease background-color;
+}
+
+.lang_continer{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  right: -34px;
+  top: -54px;
+} 
+
+.popupContainer{
+  width: 100vw;
+  height: 100vh;
+  position:absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.794);
+  z-index: 1;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s ease-in-out visibility, 0.3s ease-out opacity;
+}
+.popup_fadein{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.popupinnerContainer{
+  background-color: rgba(245, 245, 245, 0.863);
+  width: 500px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 20px 1px rgba(15, 15, 15, 0.39);
+
+}
+
+.popupinnerContainer textarea{
+  width: 80%;
+  height: 50%;
+  border-radius: 5px;
+  outline: 0px;
+  padding: 5px;
+  resize: none;
+  font-size: 16px;
+  box-shadow: 0px 5px 10px 0.5px rgba(59, 57, 57, 0.205);
+}
+
+.popupinnerContainer input{
+  all: unset;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 3px;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px 0.5px rgba(59, 57, 57, 0.479);
+  cursor: pointer;
+  width: 168px;
+  text-align: center;
+  letter-spacing: 1.1px
+}
+.popupinnerContainer input:first-child{
+  background-color: red;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  margin-right: 0.5px;
+  transition: 0.2s ease-in background-color;
+}
+.popupinnerContainer input:first-child:hover{
+  background-color: rgb(134, 4, 4);
+}
+.popupinnerContainer input:last-child{
+  background-color: green;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  margin-left: 0.5px;
+  transition: 0.2s ease-in background-color;
+}
+.popupinnerContainer input:last-child:hover{
+  background-color: rgb(2, 87, 2);
+}
+
+
+/* Media Queries */
+/* -mobile */
+@media only screen and (min-width: 270px){
+  .container{
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+  }
+  .box{
+    width: 250px;
+    height: 350px;
+    margin-bottom: 10px;
+  }
+  .speechContainer h4{
+    font-size: 14px;
+  }
+  .bttn_container{
+    height: 120px;
+    margin-top: 0px;
+  }
+  .conv_text p{
+    font-size: 12px;
+  }
+
+  .popupinnerContainer{
+    width: 350px;
+    height: 300px;
+  }
+
+  .popupinnerContainer input{
+    width: 100px;
+  }
+}
+
+@media only screen and (min-width: 500px){
+  .container{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    
+  }
+  .box{
+    width: 350px;
+    height: 350px;
+    margin-bottom: 10px;
+  }
+  .speechContainer h4{
+    font-size: 16px;
+  }
+  .bttn_container{
+    height: 130px;
+    margin-top: 0px;
+  }
+  .ball{
+    margin-top: 15px;
+  }
+  .conv_text p{
+    font-size: 14px;
+  }
+  .popupinnerContainer{
+    width: 550px;
+    height: 400px;
+  }
+
+  .popupinnerContainer input{
+    width: 180px;
+  }
+}
+
+@media only screen and (min-width: 850px){
+  .container{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+
+    
+  }
+  .box{
+    width: 350px;
+    height: 550px;
+    margin: 10px;
+  }
+  .speechContainer h4{
+    font-size: 16px;
+  }
+  .bttn_container{
+    height: 130px;
+    margin-top: 0px;
+  }
+  .ball{
+    margin-top: 15px;
+  }
+  .conv_text p{
+    font-size: 14px;
+  }
+
+  .popupinnerContainer{
+    width: 650px;
+    height: 400px;
+  }
+
+  .popupinnerContainer input{
+    width: 230px;
+  }
+}
+
+@media only screen and (min-width: 1100px){
+  .container{
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .box{
+    width: 450px;
+    height: 550px;
+    margin: 10px;
+    
+  }
+  .speechContainer h4{
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+  .bttn_container{
+    height: 180px;
+    margin-top: 0px;
+  }
+  .ball{
+    margin-top:0px;
+  }
+  .conv_text p{
+    font-size: 18px;
+  }
+}
