@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/voice-to-text/static/css/main.a397ae2c.chunk.css",
+    "main.js": "/voice-to-text/static/js/main.32b8fdf7.chunk.js",
+    "main.js.map": "/voice-to-text/static/js/main.32b8fdf7.chunk.js.map",
+    "runtime-main.js": "/voice-to-text/static/js/runtime-main.3dcc69d2.js",
+    "runtime-main.js.map": "/voice-to-text/static/js/runtime-main.3dcc69d2.js.map",
+    "static/js/2.bcd83f63.chunk.js": "/voice-to-text/static/js/2.bcd83f63.chunk.js",
+    "static/js/2.bcd83f63.chunk.js.map": "/voice-to-text/static/js/2.bcd83f63.chunk.js.map",
+    "index.html": "/voice-to-text/index.html",
+    "static/css/main.a397ae2c.chunk.css.map": "/voice-to-text/static/css/main.a397ae2c.chunk.css.map",
+    "static/js/2.bcd83f63.chunk.js.LICENSE.txt": "/voice-to-text/static/js/2.bcd83f63.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3dcc69d2.js",
+    "static/js/2.bcd83f63.chunk.js",
+    "static/css/main.a397ae2c.chunk.css",
+    "static/js/main.32b8fdf7.chunk.js"
+  ]
+}
